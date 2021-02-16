@@ -7,7 +7,7 @@ import java.util.*;
  *  date: 16.02.2021
  */
 
-public class Dublicates {
+public class Duplicates {
     public static void main(String[] args) {
         long[] arr = {1, 23, 45, 34, 34, 4, 1, 1}; //напишу main, чтобы код можно было сразу протестить.
         distinct(arr);
@@ -15,11 +15,10 @@ public class Dublicates {
     }
 
     public static void distinct(long[] arr) {
-        System.out.println("Изначальный массив: " + Arrays.toString(arr));
-        arr = Arrays.stream(arr) //Создаём стрим из массива
-                .distinct() //убираем все дубликаты из стрима
-                .toArray(); //возвращаем значения стрима в виде массива
-        System.out.println("Ответ: " + Arrays.toString(arr)
+        arr = Arrays.stream(arr)
+                .distinct()
+                .toArray();
+        System.out.println(Arrays.toString(arr)
                 .replace("[","")
                 .replace("]",""));
     }
@@ -29,7 +28,6 @@ public class Dublicates {
         for (long l : arr) {
             a.add(l);
         }
-        System.out.println(a);
+        System.out.println(a.toString().replaceAll("^\\[|]$", ""));
     }
-
 }
