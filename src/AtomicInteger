@@ -1,0 +1,19 @@
+/**
+В чём состоит проблема: в случае ошибки один поток может переопределить результат другого потока.
+Решение: для работы с многопоточными приложениями следует использовать атомарные операции. Этот вариант удобный потому что не нужно прописывать блокировки и  synchronized, да и работает он быстрее. 
+Ниже приведу пример кода с комментариями.
+*/
+
+AtomicInteger atomicInt = new AtomicInteger(); //Вместо обычного Integer используем AtomicInteger
+
+ExecutorService executor = Executors.newFixedThreadPool(2); //Создаём экземпляр класса ExecutorService, добавляем количество потоков через метод newFixedThreadPool().
+
+IntStream.range(0, 100) //Последовательность чисел от 0 до 100
+    .forEach(i -> {
+        Runnable task = () ->
+            atomicInt.accumulateAndGet(i, (n, m) -> n + m); //вместо использования операции "++" мы используем метод incrementAndGet, а также суммируем все числа от 0 до 100. 
+    });
+
+stop(executor);
+
+System.out.println(atomicInt.get()); //Получаем результат
