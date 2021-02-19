@@ -18,9 +18,7 @@ public class Duplicates {
         arr = Arrays.stream(arr)
                 .distinct()
                 .toArray();
-        System.out.println(Arrays.toString(arr)
-                .replace("[","")
-                .replace("]",""));
+        System.out.println(Arrays.toString(arr).replace("[","").replace("]",""));
     }
 
     public static void distinct_set(long[] arr) {
