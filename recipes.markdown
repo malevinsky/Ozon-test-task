@@ -1,3 +1,5 @@
+# One-cup pancakes with blueberries
+
 **SERVES:** 4
 **COOKS IN:** 15 MINUTES
 **DIFFICULTY:** SUPER EASY
