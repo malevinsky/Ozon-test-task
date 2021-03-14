@@ -1,6 +1,4 @@
 # One-cup pancakes with blueberries
-!(зел)vegetarian recipe!
-
 
 > “These are the simplest pancakes to make with kids. You don’t even need scales to weigh out the ingredients - all you need is a cup or a mug. As long as you use the same cup for measuring both the flour and the milk, you’ll be laughing! ”
 
